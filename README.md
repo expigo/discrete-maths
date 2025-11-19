@@ -17,6 +17,26 @@ This website provides a rigorous and interactive approach to learning discrete m
 - **🔗 External Resources**: Curated links to books, courses, and tools
 - **🟢 Backend Status Monitor**: Real-time connection status indicator
 
+## 🚀 React/Next.js Version (NEW!)
+
+A modern React proof of concept has been created in `discrete-math-react/` showcasing:
+
+- **Next.js 14** with TypeScript and App Router
+- **Framer Motion** for smooth animations
+- **Monaco Editor** for professional code editing
+- **Tailwind CSS** for modern styling
+- **Production-ready architecture** with reusable components
+
+**Try it:**
+```bash
+cd discrete-math-react
+npm install
+npm run dev
+# Open http://localhost:3000
+```
+
+See `discrete-math-react/README.md` for detailed comparison with the vanilla JS version.
+
 ## 📖 Course Modules
 
 ### 1. Logic & Proofs ✅
