@@ -1,0 +1,658 @@
+/* Module Content Styles */
+.module-container {
+    padding: 3rem;
+}
+
+.module-header {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.module-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.module-description {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.module-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Navigation Tabs */
+.module-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover {
+    color: var(--primary-color);
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Theory Section */
+.theory-section {
+    margin-bottom: 3rem;
+}
+
+.theory-section h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theory-section h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin: 2rem 0 1rem 0;
+}
+
+.theory-section h4 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.definition,
+.theorem,
+.proof,
+.example {
+    background-color: var(--light-bg);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
+
+.theorem {
+    border-left-color: var(--secondary-color);
+    background-color: #f5f3ff;
+}
+
+.proof {
+    border-left-color: var(--success-color);
+    background-color: #f0fdf4;
+}
+
+.example {
+    border-left-color: var(--accent-color);
+    background-color: #fffbeb;
+}
+
+.definition-title,
+.theorem-title,
+.proof-title,
+.example-title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.definition-title {
+    color: var(--primary-color);
+}
+
+.theorem-title {
+    color: var(--secondary-color);
+}
+
+.proof-title {
+    color: var(--success-color);
+}
+
+.example-title {
+    color: var(--accent-color);
+}
+
+/* Code Blocks */
+.code-container {
+    margin: 2rem 0;
+}
+
+.code-header {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.code-title {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.copy-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.code-block {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 0 0 8px 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.run-button {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.run-button:hover {
+    background-color: #059669;
+}
+
+.code-output {
+    background-color: #1a202c;
+    color: #a0aec0;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+}
+
+/* Visualization Container */
+.visualization-container {
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+.viz-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.viz-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.viz-canvas {
+    width: 100%;
+    min-height: 400px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.viz-controls {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control-group label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-dark);
+}
+
+.control-group input,
+.control-group select {
+    padding: 0.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.control-group button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.control-group button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Quiz Section */
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.question-card {
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.question-number {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.question-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.options-list {
+    list-style: none;
+}
+
+.option-item {
+    background-color: var(--light-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-item:hover {
+    background-color: #e0e7ff;
+    border-color: var(--primary-color);
+}
+
+.option-item.selected {
+    background-color: #dbeafe;
+    border-color: var(--primary-color);
+}
+
+.option-item.correct {
+    background-color: #d1fae5;
+    border-color: var(--success-color);
+}
+
+.option-item.incorrect {
+    background-color: #fee2e2;
+    border-color: var(--danger-color);
+}
+
+.submit-quiz {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 2rem auto;
+}
+
+.submit-quiz:hover {
+    background-color: var(--secondary-color);
+}
+
+.quiz-results {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.quiz-score {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.quiz-feedback {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Exercise Section */
+.exercise-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.exercise-card {
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.exercise-difficulty {
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.difficulty-easy {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.difficulty-medium {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.difficulty-hard {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.exercise-text {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.show-solution {
+    background-color: var(--text-light);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.show-solution:hover {
+    background-color: var(--text-dark);
+}
+
+.solution-container {
+    display: none;
+    background-color: var(--light-bg);
+    border-left: 4px solid var(--success-color);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+}
+
+.solution-container.visible {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* ML Application Section */
+.ml-application {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 3rem 0;
+}
+
+.ml-application h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.ml-application h3 i {
+    color: var(--accent-color);
+}
+
+.ml-application p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.ml-application ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.ml-application li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.ml-application li::before {
+    content: '▸';
+    position: absolute;
+    left: -1.5rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Resources Section in Module */
+.module-resources {
+    background-color: var(--light-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.module-resources h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.resource-link {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.resource-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.resource-link h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.resource-link p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+/* Interactive Elements */
+.interactive-demo {
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.interactive-demo h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.slider-container {
+    margin: 1rem 0;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.slider-container input[type="range"] {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: var(--border-color);
+    outline: none;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+.slider-value {
+    display: inline-block;
+    margin-left: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .module-container {
+        padding: 1.5rem;
+    }
+
+    .module-title {
+        font-size: 2rem;
+    }
+
+    .module-tabs {
+        overflow-x: auto;
+    }
+
+    .tab-button {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    .viz-controls {
+        flex-direction: column;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+}

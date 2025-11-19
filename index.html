@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discrete Mathematics for Machine Learning</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>Discrete Math for ML</h1>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#modules" class="nav-link">Modules</a></li>
+                    <li><a href="#resources" class="nav-link">Resources</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Master Discrete Mathematics for Machine Learning</h1>
+                <p class="hero-subtitle">A comprehensive, interactive course covering theory, applications, and hands-on practice</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Interactive Visualizations</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fab fa-python"></i>
+                        <span>Python Code Examples</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tasks"></i>
+                        <span>Exercises & Quizzes</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-robot"></i>
+                        <span>ML/DL Applications</span>
+                    </div>
+                </div>
+                <a href="#modules" class="cta-button">Start Learning</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules" class="modules-section">
+        <div class="container">
+            <h2 class="section-title">Course Modules</h2>
+            <p class="section-subtitle">Comprehensive coverage from fundamentals to advanced applications</p>
+
+            <div class="modules-grid">
+                <!-- Module 1: Logic and Proofs -->
+                <div class="module-card" data-module="logic">
+                    <div class="module-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Logic & Proofs</h3>
+                    <p>Propositional logic, predicate logic, proof techniques, and logical reasoning</p>
+                    <div class="module-meta">
+                        <span><i class="fas fa-book"></i> 8 Topics</span>
+                        <span><i class="fas fa-code"></i> 12 Examples</span>
+                        <span><i class="fas fa-question-circle"></i> 20 Exercises</span>
+                    </div>
+                    <button class="module-button" onclick="openModule('logic')">Explore Module</button>
+                </div>
+
+                <!-- Module 2: Set Theory -->
+                <div class="module-card" data-module="sets">
+                    <div class="module-icon">
+                        <i class="fas fa-circle-notch"></i>
+                    </div>
+                    <h3>Set Theory</h3>
+                    <p>Sets, operations, relations, functions, and cardinality</p>
+                    <div class="module-meta">
+                        <span><i class="fas fa-book"></i> 7 Topics</span>
+                        <span><i class="fas fa-code"></i> 15 Examples</span>
+                        <span><i class="fas fa-question-circle"></i> 25 Exercises</span>
+                    </div>
+                    <button class="module-button" onclick="openModule('sets')">Explore Module</button>
+                </div>
+
+                <!-- Module 3: Combinatorics -->
+                <div class="module-card" data-module="combinatorics">
+                    <div class="module-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Combinatorics</h3>
+                    <p>Counting principles, permutations, combinations, pigeonhole principle</p>
+                    <div class="module-meta">
+                        <span><i class="fas fa-book"></i> 9 Topics</span>
+                        <span><i class="fas fa-code"></i> 18 Examples</span>
+                        <span><i class="fas fa-question-circle"></i> 30 Exercises</span>
+                    </div>
+                    <button class="module-button" onclick="openModule('combinatorics')">Explore Module</button>
+                </div>
+
+                <!-- Module 4: Graph Theory -->
+                <div class="module-card" data-module="graphs">
+                    <div class="module-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Graph Theory</h3>
+                    <p>Graphs, trees, networks, algorithms, and applications to neural networks</p>
+                    <div class="module-meta">
+                        <span><i class="fas fa-book"></i> 12 Topics</span>
+                        <span><i class="fas fa-code"></i> 25 Examples</span>
+                        <span><i class="fas fa-question-circle"></i> 35 Exercises</span>
+                    </div>
+                    <button class="module-button" onclick="openModule('graphs')">Explore Module</button>
+                </div>
+
+                <!-- Module 5: Number Theory -->
+                <div class="module-card" data-module="number-theory">
+                    <div class="module-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Number Theory</h3>
+                    <p>Divisibility, primes, modular arithmetic, cryptography applications</p>
+                    <div class="module-meta">
+                        <span><i class="fas fa-book"></i> 8 Topics</span>
+                        <span><i class="fas fa-code"></i> 14 Examples</span>
+                        <span><i class="fas fa-question-circle"></i> 22 Exercises</span>
+                    </div>
+                    <button class="module-button" onclick="openModule('number-theory')">Explore Module</button>
+                </div>
+
+                <!-- Module 6: Probability Theory -->
+                <div class="module-card" data-module="probability">
+                    <div class="module-icon">
+                        <i class="fas fa-dice"></i>
+                    </div>
+                    <h3>Probability Theory</h3>
+                    <p>Probability spaces, random variables, distributions, applications in ML</p>
+                    <div class="module-meta">
+                        <span><i class="fas fa-book"></i> 11 Topics</span>
+                        <span><i class="fas fa-code"></i> 22 Examples</span>
+                        <span><i class="fas fa-question-circle"></i> 40 Exercises</span>
+                    </div>
+                    <button class="module-button" onclick="openModule('probability')">Explore Module</button>
+                </div>
+
+                <!-- Module 7: Information Theory -->
+                <div class="module-card" data-module="information">
+                    <div class="module-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>Information Theory</h3>
+                    <p>Entropy, mutual information, KL divergence, applications in deep learning</p>
+                    <div class="module-meta">
+                        <span><i class="fas fa-book"></i> 7 Topics</span>
+                        <span><i class="fas fa-code"></i> 16 Examples</span>
+                        <span><i class="fas fa-question-circle"></i> 18 Exercises</span>
+                    </div>
+                    <button class="module-button" onclick="openModule('information')">Explore Module</button>
+                </div>
+
+                <!-- Module 8: Boolean Algebra -->
+                <div class="module-card" data-module="boolean">
+                    <div class="module-icon">
+                        <i class="fas fa-toggle-on"></i>
+                    </div>
+                    <h3>Boolean Algebra</h3>
+                    <p>Boolean functions, logic gates, Karnaugh maps, circuit optimization</p>
+                    <div class="module-meta">
+                        <span><i class="fas fa-book"></i> 6 Topics</span>
+                        <span><i class="fas fa-code"></i> 10 Examples</span>
+                        <span><i class="fas fa-question-circle"></i> 15 Exercises</span>
+                    </div>
+                    <button class="module-button" onclick="openModule('boolean')">Explore Module</button>
+                </div>
+
+                <!-- Module 9: Algorithms & Complexity -->
+                <div class="module-card" data-module="algorithms">
+                    <div class="module-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Algorithms & Complexity</h3>
+                    <p>Algorithm analysis, Big-O notation, P vs NP, optimization in ML</p>
+                    <div class="module-meta">
+                        <span><i class="fas fa-book"></i> 10 Topics</span>
+                        <span><i class="fas fa-code"></i> 20 Examples</span>
+                        <span><i class="fas fa-question-circle"></i> 28 Exercises</span>
+                    </div>
+                    <button class="module-button" onclick="openModule('algorithms')">Explore Module</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Additional Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-category">
+                    <h3><i class="fas fa-book"></i> Books</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://mitpress.mit.edu/books/mathematics-computer-science" target="_blank">Mathematics for Computer Science (MIT)</a></li>
+                        <li><a href="https://www.cambridge.org/core/books/introduction-to-graph-theory/6B84EC09F32B66BA10468B871D38EE5F" target="_blank">Introduction to Graph Theory (West)</a></li>
+                        <li><a href="https://www.inference.org.uk/mackay/itila/" target="_blank">Information Theory, Inference, and Learning (MacKay)</a></li>
+                        <li><a href="https://www.deeplearningbook.org/" target="_blank">Deep Learning (Goodfellow et al.)</a></li>
+                        <li><a href="https://mml-book.github.io/" target="_blank">Mathematics for Machine Learning</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h3><i class="fas fa-video"></i> Video Courses</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/" target="_blank">MIT 6.042J: Mathematics for CS</a></li>
+                        <li><a href="https://www.coursera.org/specializations/discrete-mathematics" target="_blank">Discrete Mathematics (Coursera)</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLB7540DEDD482705B" target="_blank">Discrete Math (TheTrevTutor)</a></li>
+                        <li><a href="https://www.khanacademy.org/computing/computer-science/algorithms" target="_blank">Khan Academy: Algorithms</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h3><i class="fas fa-globe"></i> Online Tools</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://www.wolframalpha.com/" target="_blank">WolframAlpha</a></li>
+                        <li><a href="https://csacademy.com/app/graph_editor/" target="_blank">Graph Editor & Visualizer</a></li>
+                        <li><a href="https://www.desmos.com/calculator" target="_blank">Desmos Calculator</a></li>
+                        <li><a href="https://colab.research.google.com/" target="_blank">Google Colab (Python)</a></li>
+                        <li><a href="https://networkx.org/" target="_blank">NetworkX (Graph Library)</a></li>
+                    </ul>
+                </div>
+                <div class="resource-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Practice Platforms</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://leetcode.com/problemset/all/?topicSlugs=graph" target="_blank">LeetCode (Graph Problems)</a></li>
+                        <li><a href="https://www.hackerrank.com/domains/mathematics" target="_blank">HackerRank (Mathematics)</a></li>
+                        <li><a href="https://brilliant.org/courses/discrete-mathematics/" target="_blank">Brilliant.org</a></li>
+                        <li><a href="https://projecteuler.net/" target="_blank">Project Euler</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About This Course</h2>
+            <div class="about-content">
+                <p>
+                    This comprehensive course is designed for aspiring researchers in Machine Learning, Deep Learning,
+                    and Data Science who want a rigorous understanding of the mathematical foundations underlying modern AI.
+                </p>
+                <p>
+                    Each module combines:
+                </p>
+                <ul class="feature-list">
+                    <li><strong>Rigorous Theory:</strong> Complete mathematical definitions, theorems, and proofs</li>
+                    <li><strong>Interactive Visualizations:</strong> Dynamic graphics to build intuition</li>
+                    <li><strong>Python Code:</strong> Practical implementations you can run and modify</li>
+                    <li><strong>ML/DL Applications:</strong> Real-world connections to machine learning</li>
+                    <li><strong>Exercises & Quizzes:</strong> Practice problems with immediate feedback</li>
+                    <li><strong>External Resources:</strong> Curated links to deepen your understanding</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Discrete Mathematics for Machine Learning. All rights reserved.</p>
+            <p>Built with ❤️ for ML researchers and practitioners</p>
+        </div>
+    </footer>
+
+    <!-- Module Modal -->
+    <div id="module-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModule()">&times;</span>
+            <div id="module-content-container"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/visualizations.js"></script>
+    <script src="js/quizzes.js"></script>
+    <script src="modules/logic/logic.js"></script>
+    <script src="modules/sets/sets.js"></script>
+    <script src="modules/combinatorics/combinatorics.js"></script>
+    <script src="modules/graphs/graphs.js"></script>
+    <script src="modules/number-theory/number-theory.js"></script>
+    <script src="modules/probability/probability.js"></script>
+    <script src="modules/information/information.js"></script>
+    <script src="modules/boolean/boolean.js"></script>
+    <script src="modules/algorithms/algorithms.js"></script>
+</body>
+</html>
